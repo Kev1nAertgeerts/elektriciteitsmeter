@@ -14,7 +14,7 @@ class Wifi:
         else:
             self.nic = network.WLAN(network.AP_IF)
             self.nic.active(True)
-            self.nic.config(essid ='Syntra Wifi is van Jefmans',password = 'Micropython')
+            self.nic.config(essid ='microcontroller_wifi',password = 'Micropython')
         
     def wlan_scan(self):
         if self.state == True:
@@ -34,7 +34,7 @@ class Wifi:
             pass
         return ip
 
-connection = Wifi('Orange-95a56', '528sv7FC')
+connection = Wifi('put here your ssid', 'put here your password')
 #connection = Wifi(ssid="Syntra_WiFi_Studenten")
 connection.wlan()
 #print(connection.wlan_scan())
