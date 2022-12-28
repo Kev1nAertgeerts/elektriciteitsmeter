@@ -28,7 +28,5 @@ class DSMR:
             tariff = telegram[obis_references.ELECTRICITY_ACTIVE_TARIFF]
             tariff = int(tariff.value)
 
-            electricity_used_total \
-                = telegram[obis_references.ELECTRICITY_USED_TARIFF_ALL[tariff - 1]]
-            electricity_delivered_total = \
-                telegram[obis_references.ELECTRICITY_DELIVERED_TARIFF_ALL[tariff - 1]]
+            electricity_used_total = telegram[obis_references.ELECTRICITY_USED_TARIFF_ALL[tariff - 1]]
+            electricity_delivered_total = telegram[obis_references.ELECTRICITY_DELIVERED_TARIFF_ALL[tariff - 1]]
